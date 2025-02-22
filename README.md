@@ -16,7 +16,7 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 {
-    "ricefordnr/yet-another-surround.nvim",
+    "ricefordinr/yet-another-surround.nvim",
     config = function()
         require("surround").setup()
     end
