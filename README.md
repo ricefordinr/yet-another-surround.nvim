@@ -29,10 +29,10 @@ Not yet
 ### It's very human to use!!
 
 1. Select some text in visual mode.
-2. Press "<leader>s" (or your configured keybinding).
+2. Press `<leader>s` (or your configured keybinding).
 3. Smash the (, {, ", or any other surround key you desire.
-4. Press Backspace to remove the last added surround.
-5. Hit Esc to finalize and go back to your normal life.
+4. Press `<BS>` (Backspace) to remove the last added surround.
+5. Hit `<ESC>` to finalize and go back to your normal life.
 
 ### Supported Pairs
 
