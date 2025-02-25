@@ -1,14 +1,11 @@
 # Neovim Surround Plugin
 
-Another simple Neovim plugin for surrounding text with pairs of characters. Works in visual mode and handles both single and multi-line selections.
+Well... another surround plugin. But hey, this one is different! (Sort of.)
 
-## Features
+## What makes this different?
 
-- Surround text with matching pairs (`()`, `[]`, `{}`, `""`, `''`, `<>`, ` `` `, `||`)
-- Add surrounds with or without spaces
-- Remove existing surrounds using space as the trigger
-- Works with both single and multi-line selections
-- Smart detection of existing surrounds (both within and outside selection)
+- Introducing Surround Mode: Instead of doing everything at once, you can continuously insert or delete surrounds until you press ESC.
+- No need to remember weird commands or keybindings, just select text, activate Surround Mode, and spam keys like a true gamer.
 
 ## Installation
 
@@ -23,32 +20,21 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 }
 ```
 
+## Demo
+
+Not yet
+
 ## Usage
 
-1. Select text in visual mode
-2. Use one of the following commands:
-   - `<leader>s` to surround without spaces
-   - `<leader>S` to surround with spaces
-3. Press the character you want to surround with
+### It's very human to use!!
 
-To remove surrounds:
+1. Select some text in visual mode.
+2. Press <leader>s (or your configured keybinding).
+3. Smash the (, {, ", or any other surround key you desire.
+4. Press <BS> (backspace) to remove the last added surround.
+5. Hit <Esc> to finalize and go back to your normal life.
 
-1. Select the text (with or without the surrounding characters)
-2. Press `<leader>s` or `<leader>S`
-3. Press space
-
-## Configuration
-
-You can customize the keymaps during setup:
-
-```lua
-require("surround").setup({
-    surround_no_space = "<leader>s",  -- Default keymap for surround without spaces
-    surround_with_space = "<leader>S" -- Default keymap for surround with spaces
-})
-```
-
-## Supported Pairs
+### Supported Pairs
 
 - Parentheses: `()`
 - Brackets: `[]`
@@ -60,3 +46,21 @@ require("surround").setup({
 - Pipes: `||`
 
 The plugin will automatically use the matching pair when either character is pressed. For example, pressing `)` will use `()` as the surround pair.
+
+## Bug(s)
+
+- **Selecting a character at the end of a line?** Yeah... that breaks it. **Why?** Because I'm bad. (I'll fix it eventually.)
+
+## Configuration
+
+Want to change the keybinding? You can do that!
+
+```lua
+require("surround").setup({
+    surround_mode_key = "<leader>s",  -- Default
+})
+```
+
+## Why does this exist?
+
+Yes
